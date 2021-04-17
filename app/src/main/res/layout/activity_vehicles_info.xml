@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VehiclesInfoActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/teal_700"
+        android:padding="10dp"
+        android:layout_gravity="center">
+
+
+        <ImageButton
+            android:id="@+id/vehiclaBackBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:src="@drawable/ic_baseline_arrow_back_white"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/tractor_information"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!--Fill input data-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/VehicleIconIv"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/tractor"
+
+            >
+
+        </com.google.android.material.imageview.ShapeableImageView>
+
+        <EditText
+            android:id="@+id/TractorName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="@string/tractor_company"
+            android:inputType="text"
+            android:padding="20dp"
+            android:drawablePadding="30dp"
+            android:paddingTop="20dp"
+            android:layout_below="@+id/VehicleIconIv"
+            android:autofillHints="@string/tractor_company" />
+
+        <EditText
+            android:id="@+id/TractorNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="@string/tractor_no"
+            android:inputType="number|text"
+            android:padding="20dp"
+            android:drawablePadding="10dp"
+            android:paddingTop="20dp"
+            android:layout_below="@+id/TractorName"
+            android:autofillHints="" />
+
+
+        <EditText
+            android:id="@+id/Rent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="@string/rent_hour"
+            android:inputType="number|text"
+            android:padding="20dp"
+            android:drawablePadding="10dp"
+            android:paddingTop="20dp"
+            android:layout_below="@+id/TractorNo"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/CityVillage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="@string/city_village"
+            android:inputType="text"
+            android:padding="20dp"
+            android:drawablePadding="10dp"
+            android:paddingTop="20dp"
+            android:layout_below="@+id/Rent"
+            android:autofillHints="" />
+
+
+        <Button
+            android:id="@+id/btn_OK"
+            style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/CityVillage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/teal_700"
+            android:minWidth="150dp"
+            android:padding="15dp"
+            android:shadowColor="@color/black"
+            android:text="@string/ok"
+            android:textSize="20sp"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
